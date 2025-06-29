@@ -1,0 +1,360 @@
+---
+---
+
+<section id="event-details" class="event-details section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title font-display text-gradient">Event Details</h2>
+      <p class="section-subtitle">
+        A comprehensive two-day experience combining virtual collaboration and physical engagement
+      </p>
+    </div>
+
+    <div class="details-grid">
+      <div class="schedule-card card">
+        <div class="card-header">
+          <div class="card-icon">📅</div>
+          <h3 class="card-title font-display">When & Where</h3>
+        </div>
+        
+        <div class="schedule-content">
+          <div class="day-schedule">
+            <div class="day-header">
+              <h4 class="day-title">Saturday, 16th August</h4>
+              <span class="day-format virtual">Virtual Event</span>
+            </div>
+            <div class="time-slot">
+              <span class="time">10:00 AM - 8:30 PM</span>
+              <span class="description">Full virtual collaboration</span>
+            </div>
+          </div>
+          
+          <div class="day-schedule">
+            <div class="day-header">
+              <h4 class="day-title">Sunday, 17th August</h4>
+              <span class="day-format physical">Physical Event</span>
+            </div>
+            <div class="time-slot">
+              <span class="time">8:30 AM</span>
+              <span class="description">Registration opens</span>
+            </div>
+            <div class="time-slot">
+              <span class="time">9:30 AM - 7:00 PM</span>
+              <span class="description">Main event activities</span>
+            </div>
+          </div>
+          
+          <div class="venue-info">
+            <strong>Venue:</strong> To be updated
+          </div>
+        </div>
+      </div>
+
+      <div class="eligibility-card card">
+        <div class="card-header">
+          <div class="card-icon">👥</div>
+          <h3 class="card-title font-display">Who Can Participate</h3>
+        </div>
+        
+        <div class="eligibility-content">
+          <p class="eligibility-text">
+            This competition is open to all students currently enrolled in:
+          </p>
+          <ul class="eligibility-list">
+            <li>Singapore secondary schools</li>
+            <li>Pre-university programmes</li>
+            <li>University institutions</li>
+          </ul>
+          
+          <div class="team-info">
+            <h4 class="team-title">Team Formation</h4>
+            <p>Form teams of <strong>3 to 5 members</strong></p>
+            <p class="team-note">
+              Team members don't need to be from the same institution. 
+              Joining solo or as a pair? We'll help match you with other participants!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mechanics-section">
+      <h3 class="mechanics-title font-display text-gradient">How It Works</h3>
+      
+      <div class="mechanics-grid">
+        <div class="mechanic-card card">
+          <div class="mechanic-icon">⚙️</div>
+          <h4 class="mechanic-title font-display">Mechanics</h4>
+          <div class="mechanic-content">
+            <p>
+              The simulation unfolds across a series of 2-hour "eras," each representing 
+              a pivotal decade in Singapore's history. Teams receive unique Era Problem 
+              Statements of varying difficulties (Tier 1 or Tier 2).
+            </p>
+            <p>
+              Rather than competing against one another, teams act as co-evolving cells 
+              within a shared national simulation, learning and adapting together.
+            </p>
+          </div>
+        </div>
+
+        <div class="mechanic-card card">
+          <div class="mechanic-icon">🎯</div>
+          <h4 class="mechanic-title font-display">Strategy</h4>
+          <div class="mechanic-content">
+            <p>
+              Teams work on one task at a time and must submit solutions before unlocking 
+              the next challenge. Tier 2 problems offer bonus point multipliers but require 
+              greater risk and time investment.
+            </p>
+            <p>
+              Strategic time management becomes critical as teams decide how deeply to 
+              invest in each problem. Live leaderboards track progress throughout.
+            </p>
+          </div>
+        </div>
+
+        <div class="mechanic-card card">
+          <div class="mechanic-icon">📋</div>
+          <h4 class="mechanic-title font-display">Vision White Paper</h4>
+          <div class="mechanic-content">
+            <p>
+              The simulation culminates in a Vision White Paper: a long-term policy proposal 
+              for Singapore's next decade (2030–2040), crafted in an area of your team's choosing.
+            </p>
+            <p>
+              This final paper must integrate historical insight, demographic foresight, 
+              and technological awareness, reflecting where Singapore could go next.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .event-details {
+    background: var(--white);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--light-gold) 100%);
+    border-radius: 0.75rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .day-schedule {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--gray-50);
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--gold);
+  }
+
+  .day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .day-title {
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .day-format {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .virtual {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--royal-blue);
+  }
+
+  .physical {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--gold);
+  }
+
+  .time-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .time {
+    font-weight: 600;
+    color: var(--primary-blue);
+  }
+
+  .description {
+    color: var(--gray-600);
+  }
+
+  .venue-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    color: var(--gray-700);
+  }
+
+  .eligibility-text {
+    margin-bottom: 1rem;
+    color: var(--gray-700);
+  }
+
+  .eligibility-list {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .eligibility-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--gray-700);
+  }
+
+  .eligibility-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: bold;
+  }
+
+  .team-info {
+    background: var(--cream);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+  }
+
+  .team-title {
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+  }
+
+  .team-info p {
+    margin-bottom: 0.5rem;
+    color: var(--gray-700);
+  }
+
+  .team-note {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+  }
+
+  .mechanics-section {
+    margin-top: 4rem;
+  }
+
+  .mechanics-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .mechanics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .mechanic-card {
+    text-align: center;
+  }
+
+  .mechanic-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .mechanic-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 1rem;
+  }
+
+  .mechanic-content p {
+    margin-bottom: 1rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .day-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .time-slot {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+
+    .mechanics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
