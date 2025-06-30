@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import actionImage from '/public/IMG_0449.PNG';
+import birdImage from '/public/IMG_0449.PNG';
 ---
 
 <section id="registration" class="registration section-padding">
@@ -90,12 +90,6 @@ import actionImage from '/public/IMG_0449.PNG';
               <p class="contact-info">
                 Questions? Contact us at <strong>[XXX]</strong>
               </p>
-            </div>
-          </div>
-          
-          <div class="action-visual">
-            <div class="bird-container">
-              <Image src={actionImage} alt="Event visual" class="action-image" />
             </div>
           </div>
         </div>
@@ -241,10 +235,7 @@ import actionImage from '/public/IMG_0449.PNG';
     padding: 3rem;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--gray-100);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    text-align: center;
   }
 
   .action-title {
@@ -280,33 +271,27 @@ import actionImage from '/public/IMG_0449.PNG';
     text-align: center;
   }
 
-  .action-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .bird-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .action-image {
-    width: 100%;
+  .free-bird {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 200px;
     height: auto;
-    max-width: 400px;
+    z-index: 10;
     border-radius: 1rem;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    transform: scale(1.2);
     transition: transform 0.3s ease;
   }
 
-  .action-image:hover {
-    transform: scale(1.25);
+  .free-bird:hover {
+    transform: scale(1.05);
+  }
+
+  .action-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
@@ -315,9 +300,7 @@ import actionImage from '/public/IMG_0449.PNG';
     }
 
     .action-card {
-      grid-template-columns: 1fr;
       padding: 2rem;
-      text-align: center;
     }
 
     .step {
@@ -329,17 +312,13 @@ import actionImage from '/public/IMG_0449.PNG';
       height: 2rem;
     }
 
-    .bird-container {
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    .action-image {
-      transform: scale(1.1);
-    }
-
-    .action-image:hover {
-      transform: scale(1.15);
+    .free-bird {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 150px;
+      margin: 2rem auto 0;
+      display: block;
     }
   }
 </style>
