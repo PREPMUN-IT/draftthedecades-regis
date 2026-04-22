@@ -1,59 +1,15 @@
 ---
-import { Image } from 'astro:assets';
-import heroBg from '/public/Cover Title BG.jpg';
+import { Image } from "astro:assets";
+import heroBg from "/public/CoverTitleBGV2.png";
 ---
 
 <section class="hero">
   <div class="hero-background">
     <Image src={heroBg} alt="" class="hero-bg-image" />
   </div>
-  
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <div class="title-container">
-          <h1 class="hero-title font-display">
-            <span class="title-line">Drafting the</span>
-            <span class="title-line gold-gradient">Decades</span>
-          </h1>
-          
-          <p class="hero-subtitle">
-            An immersive SG60 policy simulation where participants tackle real historical dilemmas 
-            and future challenges across Singapore's six decades of independence.
-          </p>
-        </div>
-        
-        <div class="hero-details">
-          <div class="detail-item">
-            <div class="detail-icon">📅</div>
-            <div>
-              <div class="detail-title">Event Dates</div>
-              <div class="detail-text">16th-17th August 2025</div>
-            </div>
-          </div>
-          
-          <div class="detail-item">
-            <div class="detail-icon">🏛️</div>
-            <div>
-              <div class="detail-title">Partnership</div>
-              <div class="detail-text">Presented by PREPMUN and Moulmein-Cairnhill Youth Network, in collaboration with the People's Association and the National Youth Council.</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="hero-actions">
-          <a href="https://forms.gle/ARhbN4R2oymJavrM8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-            Register Now
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="#about" class="btn btn-secondary">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+
+  <div class="container"></div>
+
   <div class="scroll-indicator">
     <div class="scroll-arrow"></div>
   </div>
@@ -188,7 +144,11 @@ import heroBg from '/public/Cover Title BG.jpg';
   }
 
   @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
       transform: translateX(-50%) translateY(0);
     }
     40% {
