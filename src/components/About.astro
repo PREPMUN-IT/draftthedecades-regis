@@ -6,10 +6,10 @@ import aboutBg from '/public/Full BG.png';
 <section id="about" class="about section-padding">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title font-display text-gradient">About Worlds We Govern</h2>
+      <h2 class="section-title font-display">About Worlds We Govern</h2>
       <p class="section-subtitle">
-        A simulation series that invites youth to explore the conflicts, compromises, 
-        and convictions that shape our societies.
+        Step into the heart of Singapore’s legislative process and into the shoes of a Member of Parliament. 
+        Worlds We Govern is a simulation series that seeks to democratise the policymaking experience for all! 
       </p>
     </div>
 
@@ -67,7 +67,12 @@ import aboutBg from '/public/Full BG.png';
 
 <style>
   .about {
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+   background: linear-gradient(
+  to bottom,
+  #000000,
+  #1A0508,
+  #7A0F1D
+);
   }
 
   .section-header {
@@ -79,11 +84,12 @@ import aboutBg from '/public/Full BG.png';
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 600;
     margin-bottom: 1rem;
+    color: var(--white);
   }
 
   .section-subtitle {
     font-size: 1.25rem;
-    color: var(--gray-600);
+    color: var(--gray-400);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
