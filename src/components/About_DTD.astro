@@ -1,20 +1,36 @@
 ---
 import { Image } from "astro:assets";
 import DDD2025 from "/public/ddd2025_pics.png";
+import PrepmunPresents from "/public/prepmun_presents.png";
 ---
 
 <section id="about" class="about">
-  <Image src={DDD2025} alt="Banner" class="about-bg-image" />
-  <div class="about-content">
-    <p class="section-title font-display">DRAFTING THE DECADES 2025</p>
-    <p class="section-subtitle font-display">
-      Building on the success of our 2025 pilot event, Drafting the Decades.
-    </p>
+  <div class="banner">
+    <Image src={DDD2025} alt="Banner" class="about-bg-image" />
+    <div class="about-content">
+      <p class="section-title font-display">DRAFTING THE DECADES 2025</p>
+      <p class="section-subtitle font-display">
+        Building on the success of our 2025 pilot event, Drafting the Decades.
+      </p>
+    </div>
+  </div>
+  <div class="banner">
+    <Image
+      src={PrepmunPresents}
+      alt="Banner"
+      class="about-bg-image"
+      id="prepmun-presents"
+    />
+    <p class="present-subtitle font-display">PREPMUN Singapore Presents</p>
   </div>
 </section>
 
 <style>
   .about {
+    color: var(--white);
+  }
+
+  .banner {
     position: relative;
     width: 100%;
     height: 650px;
@@ -34,7 +50,6 @@ import DDD2025 from "/public/ddd2025_pics.png";
     position: relative;
     z-index: 2;
     height: 100%;
-    color: var(--white);
     background: rgba(0, 0, 0, 0.2);
   }
 
@@ -66,5 +81,27 @@ import DDD2025 from "/public/ddd2025_pics.png";
     font-style: italic;
     color: var(--gray-300);
     line-height: 1.2;
+  }
+
+  #present-section {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+    width: 100%;
+    height: 650px;
+  }
+
+  .present-subtitle {
+    width: 100%;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
   }
 </style>
