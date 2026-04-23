@@ -1,6 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import aboutBg from "/public/Full BG.png";
+
 ---
 
 <section id="about" class="about section-padding">
@@ -55,35 +54,19 @@ import aboutBg from "/public/Full BG.png";
       </div>
     </div>
   </div>
-
-  <div class="initiative-section">
-    <div class="initiative-header">
-      <h3 class="initiative-title font-display">
-        Introducing our first initiative:
-      </h3>
-    </div>
-
-    <div class="drafting-card">
-      <div class="card-content">
-        <h4 class="card-title font-display gold-gradient">
-          What is Drafting the Decades?
-        </h4>
-        <p class="card-text">
-          Drafting the Decades is an immersive SG60 policy simulation where
-          participants tackle real historical dilemmas and future challenges
-          across Singapore's six decades. In collaboration with the People's
-          Association and National Youth Council, it commemorates Singapore's
-          60-year journey and inspires participants to build a stronger,
-          future-ready Singapore through teamwork, history, and innovation.
-        </p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <style>
   .about {
-    background: linear-gradient(to bottom, #000000, #1a0508, #7a0f1d);
+    background: linear-gradient(
+      to bottom,
+      #000000 0%,
+      #1a0508 10%,
+      #800e1f 25%,
+      #800e1f  65%,
+      #1a0508 90%,
+      #000000 100%
+    );
   }
 
   .section-header {
@@ -100,7 +83,7 @@ import aboutBg from "/public/Full BG.png";
 
   .section-subtitle {
     font-size: 1.25rem;
-    color: var(--gray-300);
+    color: var(--white);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -113,7 +96,7 @@ import aboutBg from "/public/Full BG.png";
     align-self: center;
     text-align: left;
     font-style: italic;
-    color: var(--gray-300);
+    color: var(--white);
     line-height: 1.2;
   }
 

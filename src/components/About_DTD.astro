@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import DDD2025 from "/public/ddd2025_pics.png";
+---
+
+<section id="about" class="about">
+  <Image src={DDD2025} alt="Banner" class="about-bg-image" />
+  <div class="about-content">
+    <p class="section-title">DRAFTING THE DECADES 2025</p>
+    <p class="section-subtitle">
+      Building on the success of our 2025 pilot event, Drafting the Decades.
+    </p>
+  </div>
+</section>
+
+<style>
+  .about {
+    position: relative;
+    width: 100%;
+    height: 650px;
+  }
+
+  .about-bg-image {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .about-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    color: var(--white);
+  }
+
+  .section-title {
+    width: 10%;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+
+  .section-subtitle {
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: var(--white);
+    font-weight: 600;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+  }
+
+  .side-header {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    flex: 0 0 20%;
+    align-self: center;
+    text-align: left;
+    font-style: italic;
+    color: var(--gray-300);
+    line-height: 1.2;
+  }
+</style>
