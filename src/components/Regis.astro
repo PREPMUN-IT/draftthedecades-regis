@@ -1,55 +1,111 @@
-<section class="registration-section">
-  <div class="content-wrapper">
-    <header class="section-header font-display">
-      <h1 class="section-title">Registration Details</h1>
-      <p class="subtitle">[Independent Participants]</p>
-    </header>
-    <div class="table-container">
-      <table class="registration-table">
-        <thead>
-          <tr>
-            <th>Registration Tier</th>
-            <th>Price</th>
-            <th>Registration Deadline</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tier-name">Early Bird</td>
-            <td class="tier-price">$35</td>
-            <td class="tier-deadline">31 May 2026, 2359hrs</td>
-            <td class="tier-status"
-              ><span class="status-badge status-badge--open">OPEN</span></td
-            >
-          </tr>
-          <tr>
-            <td class="tier-name">Regular</td>
-            <td class="tier-price">$40</td>
-            <td class="tier-deadline">30 June 2026, 2359hrs</td>
-            <td class="tier-status"
-              ><span class="status-badge status-badge--coming-soon"
-                >COMING SOON</span
-              ></td
-            >
-          </tr>
-          <tr>
-            <td class="tier-name">Late</td>
-            <td class="tier-price">$45</td>
-            <td class="tier-deadline">31 July 2026, 2359hrs</td>
-            <td class="tier-status"
-              ><span class="status-badge status-badge--coming-soon"
-                >COMING SOON</span
-              ></td
-            >
-          </tr>
-        </tbody>
-      </table>
+<section class="registration-section section-padding">
+  <div class="container">
+    <div class="tables">
+      <header class="section-header font-display">
+        <h1 class="section-title">Registration Details</h1>
+        <p class="section-subtitle">[Independent Participants]</p>
+      </header>
+      <div class="table-container">
+        <table class="registration-table">
+          <thead>
+            <tr>
+              <th>Registration Tier</th>
+              <th>Price</th>
+              <th>Registration Deadline</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tier-name">Early Bird</td>
+              <td class="tier-price">$35</td>
+              <td class="tier-deadline">31 May 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--open">OPEN</span></td
+              >
+            </tr>
+            <tr>
+              <td class="tier-name">Regular</td>
+              <td class="tier-price">$40</td>
+              <td class="tier-deadline">30 June 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--coming-soon"
+                  >COMING SOON</span
+                ></td
+              >
+            </tr>
+            <tr>
+              <td class="tier-name">Late</td>
+              <td class="tier-price">$45</td>
+              <td class="tier-deadline">31 July 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--coming-soon"
+                  >COMING SOON</span
+                ></td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <header class="section-header font-display">
+        <p class="section-subtitle">
+          [Independent Groups & School Delegations]
+        </p>
+      </header>
+      <div class="table-container">
+        <table class="registration-table">
+          <thead>
+            <tr>
+              <th>Registration Tier</th>
+              <th>Price</th>
+              <th>Registration Deadline</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tier-name">Early Bird</td>
+              <td class="tier-price">$30</td>
+              <td class="tier-deadline">31 May 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--open">OPEN</span></td
+              >
+            </tr>
+            <tr>
+              <td class="tier-name">Regular</td>
+              <td class="tier-price">$35</td>
+              <td class="tier-deadline">30 June 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--coming-soon"
+                  >COMING SOON</span
+                ></td
+              >
+            </tr>
+            <tr>
+              <td class="tier-name">Late</td>
+              <td class="tier-price">$40</td>
+              <td class="tier-deadline">31 July 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--coming-soon"
+                  >COMING SOON</span
+                ></td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
+  .tables {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
   .registration-section {
     position: relative;
     min-height: 100vh;
@@ -57,48 +113,22 @@
     align-items: center;
     justify-content: center;
     background: black;
-    padding: 4rem 2rem;
-    font-family: "Barlow", sans-serif;
     overflow: hidden;
-  }
-
-  .content-wrapper {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 1100px;
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 2.5rem;
   }
 
   .section-title {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 600;
-    margin-bottom: 1rem;
   }
 
-  .title {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: clamp(3rem, 8vw, 6rem);
-    color: var(--white);
-    letter-spacing: 0.04em;
-    line-height: 1;
-    text-shadow:
-      0 2px 12px rgba(0, 0, 0, 0.4),
-      0 0 40px rgba(255, 255, 255, 0.08);
-    animation: fadeDown 0.7s ease both;
-  }
-
-  .subtitle {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: clamp(1.6rem, 4vw, 2.8rem);
+  .section-subtitle {
+    font-size: clamp(2rem, 4vw, 2.5rem);
     color: var(--white);
     letter-spacing: 0.02em;
-    margin-top: 0.3rem;
-    opacity: 0.92;
     animation: fadeDown 0.7s 0.1s ease both;
   }
 
@@ -107,11 +137,6 @@
     border: 1px solid var(--table-border);
     border-radius: 4px;
     overflow: hidden;
-    backdrop-filter: blur(8px);
-    box-shadow:
-      0 8px 40px rgba(0, 0, 0, 0.35),
-      inset 0 1px 0 rgba(255, 255, 255, 0.12);
-    animation: fadeUp 0.7s 0.2s ease both;
   }
 
   .registration-table {
@@ -126,7 +151,6 @@
 
   thead th {
     padding: 1.2rem 1.5rem;
-    font-family: "Barlow", sans-serif;
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -138,23 +162,6 @@
   tbody tr {
     background: var(--row-bg);
     border-bottom: 1px solid var(--table-border);
-    transition: background 0.2s ease;
-  }
-
-  tbody tr:nth-child(1) {
-    animation: rowFade 0.5s 0.35s ease both;
-  }
-  tbody tr:nth-child(2) {
-    animation: rowFade 0.5s 0.45s ease both;
-  }
-  tbody tr:nth-child(3) {
-    animation: rowFade 0.5s 0.55s ease both;
-  }
-  tbody tr:last-child {
-    border-bottom: none;
-  }
-  tbody tr:hover {
-    background: var(--row-hover);
   }
 
   tbody td {
@@ -202,39 +209,6 @@
     background: rgba(255, 255, 255, 0.06);
     color: rgba(255, 255, 255, 0.55);
     border: 1px solid rgba(255, 255, 255, 0.12);
-  }
-
-  @keyframes fadeDown {
-    from {
-      opacity: 0;
-      transform: translateY(-16px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes rowFade {
-    from {
-      opacity: 0;
-      transform: translateX(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
   }
 
   @media (max-width: 640px) {
