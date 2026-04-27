@@ -5,9 +5,7 @@
 <section id="faq" class="faq section-padding">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title font-display">
-        Frequently Asked Questions
-      </h2>
+      <h2 class="section-title font-display">Frequently Asked Questions</h2>
     </div>
 
     <div class="faq-content">
@@ -143,7 +141,7 @@
             </p>
           </div>
         </div>
-
+      </div>
       <div class="faq-contact">
         <div class="contact-card card">
           <div class="contact-content">
@@ -160,193 +158,193 @@
       </div>
     </div>
   </div>
-</section>
 
-<style>
-  .faq {
-    background: black;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .section-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  .faq-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    align-items: flex-start;
-  }
-
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .faq-item {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .faq-item:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  }
-
-  .faq-question {
-    width: 100%;
-    padding: 1.5rem;
-    background: none;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--gray-800);
-    transition: all 0.3s ease;
-  }
-
-  .faq-question:hover {
-    background: var(--gray-50);
-  }
-
-  .faq-icon {
-    transition: transform 0.3s ease;
-    color: var(--gold);
-  }
-
-  .faq-item.active .faq-icon {
-    transform: rotate(180deg);
-  }
-
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .faq-item.active .faq-answer {
-    max-height: 500px;
-  }
-
-  .faq-answer p {
-    padding: 0 1.5rem 1.5rem;
-    color: var(--gray-700);
-    line-height: 1.6;
-  }
-
-  .answer-sections {
-    padding: 0 1.5rem 1.5rem;
-  }
-
-  .answer-section {
-    margin-bottom: 1.5rem;
-  }
-
-  .answer-section:last-child {
-    margin-bottom: 0;
-  }
-
-  .answer-section h4 {
-    font-weight: 600;
-    color: var(--gray-800);
-    margin-bottom: 0.5rem;
-  }
-
-  .answer-section p {
-    padding: 0;
-    margin: 0;
-    color: var(--gray-700);
-    line-height: 1.6;
-  }
-
-  .faq-contact {
-    position: sticky;
-    top: 2rem;
-  }
-
-  .contact-card {
-    background: linear-gradient(
-      135deg,
-      var(--cream) 0%,
-      rgba(251, 191, 36, 0.1) 100%
-    );
-    border: 1px solid rgba(245, 158, 11, 0.2);
-    text-align: center;
-  }
-
-  .contact-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--gray-800);
-    margin-bottom: 1rem;
-  }
-
-  .contact-description {
-    color: var(--gray-700);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-info {
-    color: var(--gold);
-    font-size: 1.125rem;
-  }
-
-  @media (max-width: 768px) {
-    .faq-content {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+  <style>
+    .faq {
+      background: black;
     }
 
-    .faq-contact {
-      position: static;
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .faq-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
 
     .faq-question {
-      padding: 1rem;
-      font-size: 1rem;
+      width: 100%;
+      padding: 1.5rem;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      transition: all 0.3s ease;
     }
 
-    .faq-answer p,
+    .faq-question:hover {
+      background: var(--gray-50);
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+      color: var(--gold);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer p {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
     .answer-sections {
-      padding: 0 1rem 1rem;
+      padding: 0 1.5rem 1.5rem;
     }
-  }
-</style>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const faqQuestions = document.querySelectorAll(".faq-question");
+    .answer-section {
+      margin-bottom: 1.5rem;
+    }
 
-    faqQuestions.forEach((question) => {
-      question.addEventListener("click", function () {
-        const faqItem = this.closest(".faq-item");
-        const isActive = faqItem.classList.contains("active");
+    .answer-section:last-child {
+      margin-bottom: 0;
+    }
 
-        // Close all FAQ items
-        document.querySelectorAll(".faq-item").forEach((item) => {
-          item.classList.remove("active");
+    .answer-section h4 {
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 0.5rem;
+    }
+
+    .answer-section p {
+      padding: 0;
+      margin: 0;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    .faq-contact {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .contact-card {
+      background: linear-gradient(
+        135deg,
+        var(--cream) 0%,
+        rgba(251, 191, 36, 0.1) 100%
+      );
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 1rem;
+    }
+
+    .contact-description {
+      color: var(--gray-700);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+      color: var(--gold);
+      font-size: 1.125rem;
+    }
+
+    @media (max-width: 768px) {
+      .faq-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .faq-contact {
+        position: static;
+      }
+
+      .faq-question {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+
+      .faq-answer p,
+      .answer-sections {
+        padding: 0 1rem 1rem;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faqQuestions = document.querySelectorAll(".faq-question");
+
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", function () {
+          const faqItem = this.closest(".faq-item");
+          const isActive = faqItem.classList.contains("active");
+
+          // Close all FAQ items
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Open clicked item if it wasn't active
+          if (!isActive) {
+            faqItem.classList.add("active");
+          }
         });
-
-        // Open clicked item if it wasn't active
-        if (!isActive) {
-          faqItem.classList.add("active");
-        }
       });
     });
-  });
-</script>
+  </script>
+</section>
