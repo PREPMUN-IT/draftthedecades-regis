@@ -46,9 +46,7 @@
           <h3 class="card-title font-display">Location</h3>
         </div>
 
-        <div class="location-content">
-          
-        </div>
+        <div class="location-content"></div>
       </div>
     </div>
 
@@ -85,59 +83,18 @@
   </div>
 
   <div class="mechanics-section">
-    <h3 class="mechanics-title font-display">How It Works</h3>
+    <div class="container">
+      <h3 class="mechanics-title font-display">How It Works</h3>
 
-    <div class="mechanics-grid">
-      <div class="mechanic-card card">
-        <div class="mechanic-icon">⚙️</div>
-        <h4 class="mechanic-title font-display">Mechanics</h4>
-        <div class="mechanic-content">
-          <p>
-            The simulation unfolds across a series of 2-hour "eras," each
-            representing a pivotal decade in Singapore's history. Teams receive
-            unique Era Problem Statements of varying difficulties (Tier 1 or
-            Tier 2).
-          </p>
-          <p>
-            Rather than competing against one another, teams act as co-evolving
-            cells within a shared national simulation, learning and adapting
-            together.
-          </p>
-        </div>
-      </div>
-
-      <div class="mechanic-card card">
-        <div class="mechanic-icon">🎯</div>
-        <h4 class="mechanic-title font-display">Strategy</h4>
-        <div class="mechanic-content">
-          <p>
-            Teams work on one task at a time and must submit solutions before
-            unlocking the next challenge. Tier 2 problems offer bonus point
-            multipliers but require greater risk and time investment.
-          </p>
-          <p>
-            Strategic time management becomes critical as teams decide how
-            deeply to invest in each problem. Live leaderboards track progress
-            throughout.
-          </p>
-        </div>
-      </div>
-
-      <div class="mechanic-card card">
-        <div class="mechanic-icon">📋</div>
-        <h4 class="mechanic-title font-display">Vision White Paper</h4>
-        <div class="mechanic-content">
-          <p>
-            The simulation culminates in a Vision White Paper: a long-term
-            policy proposal for Singapore's next decade (2030–2040), crafted in
-            an area of your team's choosing.
-          </p>
-          <p>
-            This final paper must integrate historical insight, demographic
-            foresight, and technological awareness, reflecting where Singapore
-            could go next.
-          </p>
-        </div>
+      <div class="mechanics-content">
+        <p>
+          Worlds We Govern will immerse participants in the legislative process of
+          the Singapore Parliament. With our various academic committees and
+          unique mechanics, this journey will bring youths through spirited
+          debates across several Readings, much akin to Singapore's real-world
+          parliamentary procedure.
+        </p>
+        <p>Check out our Prospectus for more details</p>
       </div>
     </div>
   </div>
@@ -305,42 +262,32 @@
   }
 
   .mechanics-section {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   .mechanics-title {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 600;
     text-align: center;
     margin-bottom: 3rem;
+    color: var(--white);
   }
 
-  .mechanics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .mechanic-card {
+  .mechanics-content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .mechanic-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .mechanic-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--gray-800);
-    margin-bottom: 1rem;
-  }
-
-  .mechanic-content p {
-    margin-bottom: 1rem;
-    color: var(--gray-700);
+  .mechanics-content p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--white);
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .mechanics-content p:last-child {
+    margin-bottom: 0;
   }
 
   @media (max-width: 768px) {
@@ -359,8 +306,8 @@
       gap: 0.25rem;
     }
 
-    .mechanics-grid {
-      grid-template-columns: 1fr;
+    .mechanics-content p {
+      font-size: 1rem;
     }
   }
 </style>
