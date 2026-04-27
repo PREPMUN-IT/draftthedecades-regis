@@ -290,7 +290,23 @@
       font-weight: 600;
       color: var(--gray-800);
       margin-bottom: 1rem;
-    }
+    }FAQ script loaded
+(index):406 Document ready state: loading
+(index):364 setupFAQ called
+(index):366 FAQ section found: true
+(index):374 FAQ questions found: 4
+(index):377 Setting up question 0
+(index):377 Setting up question 1
+(index):377 Setting up question 2
+(index):377 Setting up question 3
+(index):411 Trying setupFAQ after delay
+(index):364 setupFAQ called
+(index):366 FAQ section found: true
+(index):374 FAQ questions found: 4
+(index):377 Setting up question 0
+(index):377 Setting up question 1
+(index):377 Setting up question 2
+(index):377 Setting up question 3
 
     .contact-description {
       color: var(--gray-700);
@@ -325,26 +341,39 @@
     }
   </style>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const faqQuestions = document.querySelectorAll(".faq-question");
+  <script is:inline>
+    function setupFAQ() {
+      // Use event delegation on the document
+      document.addEventListener("click", function(e) {
+        const target = e.target;
+        
+        // Check if the clicked element is a FAQ question or inside one
+        const faqQuestion = target.closest(".faq-question");
+        if (!faqQuestion) {
+          return;
+        }
+        
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const faqItem = faqQuestion.closest(".faq-item");
+        if (!faqItem) return;
 
-      faqQuestions.forEach((question) => {
-        question.addEventListener("click", function () {
-          const faqItem = this.closest(".faq-item");
-          const isActive = faqItem.classList.contains("active");
+        const isActive = faqItem.classList.contains("active");
 
-          // Close all FAQ items
-          document.querySelectorAll(".faq-item").forEach((item) => {
-            item.classList.remove("active");
-          });
-
-          // Open clicked item if it wasn't active
-          if (!isActive) {
-            faqItem.classList.add("active");
-          }
+        // Close all FAQ items
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          item.classList.remove("active");
         });
-      });
-    });
+
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add("active");
+        }
+      }, true); // Use capture phase
+    }
+
+    // Setup immediately
+    setupFAQ();
   </script>
 </section>
