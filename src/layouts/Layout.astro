@@ -44,8 +44,8 @@ const { title } = Astro.props;
     --gray-700: #374151;
     --gray-800: #1f2937;
     --gray-900: #111827;
-    --red-dark: #8b0000; /* Deep wine red */
-    --red-light: #c06c73; /* Vibrant coral red */
+    --red-dark: #8b0000;
+    --red-light: #c06c73;
   }
 
   * {
@@ -56,13 +56,22 @@ const { title } = Astro.props;
 
   html {
     scroll-behavior: smooth;
+    background: linear-gradient(
+      to bottom,
+      #d9969e 0%,
+      #8b0000 65%,
+      #1a0a0a 90%,
+      #0a0a0a 100%
+    ); /*the gradient has to be inverted for some reason*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   body {
     font-family: "Inter", sans-serif;
     line-height: 1.6;
     color: var(--white);
-    background: black;
+    background: transparent;
   }
 
   .font-display {
