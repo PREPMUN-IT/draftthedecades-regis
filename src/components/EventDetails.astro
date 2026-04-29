@@ -46,7 +46,20 @@
           <h3 class="card-title font-display">Location</h3>
         </div>
 
-        <div class="location-content"></div>
+        <div class="location-content">
+          <p class="location-text">Hwa Chong Institution</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card-header">
+          <div class="card-icon">🎩</div>
+          <h3 class="card-title font-display">Dress Code</h3>
+        </div>
+
+        <div class="dress-code-content">
+          <p class="dress-code-text">Western Formal</p>
+        </div>
       </div>
     </div>
 
@@ -158,7 +171,7 @@
   }
 
   .card-title {
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.5rem, 2vw, 1.75rem);
     font-weight: 600;
     color: var(--white);
   }
@@ -166,10 +179,10 @@
   .day-schedule {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: var(--gray-50);
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 0.75rem;
-    border-left: 4px solid var(--gold);
-    color: var(--gray-800);
+    color: white;
   }
 
   .day-header {
@@ -182,7 +195,7 @@
   }
 
   .day-title {
-    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     font-weight: 600;
   }
 
@@ -211,7 +224,7 @@
   }
 
   .time {
-    font-size: clamp(0.95rem, 1.1vw, 1.125rem);
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     font-weight: 600;
     color: var(--primary-blue);
   }
@@ -309,6 +322,31 @@
     font-weight: bold;
     text-decoration: underline;
     color: inherit;
+  }
+
+  .location-content,
+  .dress-code-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+  }
+
+  .location-text,
+  .dress-code-text {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-weight: 600;
+    color: white;
+    margin: 0;
+  }
+
+  .divider {
+    height: 3px;
+    background-color: white;
+    margin: 1.5rem 0;
   }
 
   @media (max-width: 768px) {
