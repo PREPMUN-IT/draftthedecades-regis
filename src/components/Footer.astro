@@ -39,11 +39,21 @@ import footerBg from "/public/footer_bg.png";
             <h4 class="link-title">Contact</h4>
             <ul class="link-list">
               <li>
-                <span class="contact-item">Email: worldswegovern@gmail.com</span
-                >
+                <span class="contact-item">
+                  Email: <a
+                    href="mailto:worldswegovern@gmail.com"
+                    class="contact-link">worldswegovern@gmail.com</a
+                  >
+                </span>
               </li>
               <li>
-                <span class="contact-item">Instagram: @worldswegovern</span>
+                <span class="contact-item">
+                  Instagram: <a
+                    href="https://www.instagram.com/worldswegovern"
+                    class="contact-link"
+                    target="_blank">@worldswegovern</a
+                  >
+                </span>
               </li>
             </ul>
           </div>
@@ -56,9 +66,7 @@ import footerBg from "/public/footer_bg.png";
           <p class="copyright">© 2026 Worlds We Govern. All rights reserved.</p>
           <div class="partnership">
             <span class="partnership-text">Supported by:</span>
-            <span class="partner-name"
-              >People's Association & National Youth Council</span
-            >
+            <span class="partner-name">Maju and Campus Impact</span>
           </div>
         </div>
       </div>
@@ -76,6 +84,24 @@ import footerBg from "/public/footer_bg.png";
     color: var(--white);
     position: relative;
     overflow: hidden;
+    background-color: black;
+  }
+
+  .footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .footer-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.45;
   }
 
   .footer-bg {
@@ -99,6 +125,9 @@ import footerBg from "/public/footer_bg.png";
     padding: 4rem 0 2rem;
     position: relative;
     z-index: 2;
+    text-shadow:
+      0 0 10px rgba(0, 0, 0, 0.8),
+      0 0 5px rgba(0, 0, 0, 1);
   }
 
   .footer-main {
@@ -158,6 +187,19 @@ import footerBg from "/public/footer_bg.png";
   .contact-item {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
+  }
+
+  .contact-link {
+    color: inherit;
+    text-decoration: none;
+    transition: text-shadow 0.2s;
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+    text-shadow:
+      0.5px 0 0 currentColor,
+      -0.5px 0 0 currentColor;
   }
 
   .footer-divider {

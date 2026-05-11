@@ -184,6 +184,69 @@
             </p>
           </div>
         </div>
+
+        <div class="academic-committee-item">
+          <button class="academic-committee-question" data-committee="7">
+            <span>Youth Mental Well-being</span>
+            <div class="academic-committee-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </div>
+          </button>
+          <div class="academic-committee-answer" data-answer="7">
+            <p>
+              Modern Singapore is more interconnected than ever before. Despite
+              this, a growing number of its youth report feeling profoundly
+              alone. Loneliness and social isolation amongst Singaporean youths
+              have emerged as unassuming, yet dangerous public health concerns
+              that often lead to the emergence of more visible symptoms, such as
+              depression, anxiety and other mental health disorders. Calls have
+              been made for Singapore to become a “We First” society grounded in
+              mutual responsibility and collaboration to tackle this issue of
+              social isolation.
+            </p>
+          </div>
+        </div>
+
+        <div class="academic-committee-item">
+          <button class="academic-committee-question" data-committee="8">
+            <span>AI in Healthcare</span>
+            <div class="academic-committee-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </div>
+          </button>
+          <div class="academic-committee-answer" data-answer="8">
+            <p>
+              The usage of AI in the healthcare sector has been increasingly
+              prevalent in the modern world. As Singapore starts to scale AI for
+              documentation, imaging, and preventive risk assessment, the
+              current regulatory line stands that AI should augment healthcare
+              professionals, while emphasising patient safety and trust.
+              Contention thus lies in whether the usage of AI should be more
+              broadly supported, and how it should be implemented while
+              upholding the principles of healthcare for the people. In sum,
+              legislation must consider how far, under whose control, and at
+              whose risk AI should be deployed.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -313,33 +376,43 @@
   <script is:inline>
     function setupAcademicCommittees() {
       // Use event delegation on the document
-      document.addEventListener("click", function(e) {
-        const target = e.target;
-        
-        // Check if the clicked element is an academic committee question or inside one
-        const committeeQuestion = target.closest(".academic-committee-question");
-        if (!committeeQuestion) {
-          return;
-        }
-        
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const committeeItem = committeeQuestion.closest(".academic-committee-item");
-        if (!committeeItem) return;
+      document.addEventListener(
+        "click",
+        function (e) {
+          const target = e.target;
 
-        const isActive = committeeItem.classList.contains("active");
+          // Check if the clicked element is an academic committee question or inside one
+          const committeeQuestion = target.closest(
+            ".academic-committee-question",
+          );
+          if (!committeeQuestion) {
+            return;
+          }
 
-        // Close all academic committee items
-        document.querySelectorAll(".academic-committee-item").forEach((item) => {
-          item.classList.remove("active");
-        });
+          e.preventDefault();
+          e.stopPropagation();
 
-        // Open clicked item if it wasn't active
-        if (!isActive) {
-          committeeItem.classList.add("active");
-        }
-      }, true); // Use capture phase
+          const committeeItem = committeeQuestion.closest(
+            ".academic-committee-item",
+          );
+          if (!committeeItem) return;
+
+          const isActive = committeeItem.classList.contains("active");
+
+          // Close all academic committee items
+          document
+            .querySelectorAll(".academic-committee-item")
+            .forEach((item) => {
+              item.classList.remove("active");
+            });
+
+          // Open clicked item if it wasn't active
+          if (!isActive) {
+            committeeItem.classList.add("active");
+          }
+        },
+        true,
+      ); // Use capture phase
     }
 
     // Setup immediately

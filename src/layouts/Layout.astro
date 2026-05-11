@@ -53,19 +53,19 @@ const { title } = Astro.props;
     scroll-behavior: smooth;
     background: linear-gradient(
       to bottom,
-      #d9969e 0%,
-      #aa0000 65%,
-      #1a0a0a 95%,
-      #0a0a0a 100%
-    ); /*the gradient has to be inverted for some reason*/
-    background-attachment: fixed;
+      #000000 0%,
+      #0a0a0a 45%,
+      #990012 60%,
+      #ad4553 100%
+    );
+    background-attachment: scroll;
     background-repeat: no-repeat;
   }
 
   body {
     font-family: "Inter", sans-serif;
     line-height: 1.6;
-    color: var(--white);
+    color: var(--white);  
     background: transparent;
   }
 
@@ -101,7 +101,7 @@ const { title } = Astro.props;
     background: linear-gradient(135deg, #4a0404 0%, #c90c0c 100%);
     color: var(--white);
     box-shadow: 0 4px 25px 2px rgba(255, 0, 0, 0.6);
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
   }
 
   .btn-primary:hover {
