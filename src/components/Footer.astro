@@ -1,68 +1,98 @@
 ---
-import { Image } from 'astro:assets';
-import decorationImage from '/public/IMG_0450.PNG';
+import { Image } from "astro:assets";
+import footerBg from "/public/footer_bg.png";
 ---
 
 <footer class="footer">
+  <div class="footer-bg">
+    <Image src={footerBg} alt="" class="footer-bg-image" />
+  </div>
   <div class="container">
     <div class="footer-content">
       <div class="footer-main">
         <div class="footer-brand">
           <h3 class="brand-title font-display">Worlds We Govern</h3>
           <p class="brand-description">
-            Exploring the conflicts, compromises, and convictions that shape our societies. 
-            From policy drafting to historical inquiry, we invite youth to engage with 
-            the past to better understand how to lead the future.
+            Exploring the conflicts, compromises, and convictions that shape our
+            societies. From policy drafting to historical inquiry, we invite
+            youth to engage with the past to better understand how to lead the
+            future.
           </p>
         </div>
-        
+
         <div class="footer-links">
           <div class="link-group">
             <h4 class="link-title">Event</h4>
             <ul class="link-list">
               <li><a href="#about" class="footer-link">About</a></li>
-              <li><a href="#event-details" class="footer-link">Event Details</a></li>
-              <li><a href="#registration" class="footer-link">Registration</a></li>
+              <li>
+                <a href="#event-details" class="footer-link">Event Details</a>
+              </li>
+              <li>
+                <a href="#registration" class="footer-link">Registration</a>
+              </li>
               <li><a href="#faq" class="footer-link">FAQ</a></li>
             </ul>
           </div>
-          
+
           <div class="link-group">
             <h4 class="link-title">Contact</h4>
             <ul class="link-list">
-              <li><span class="contact-item">Email: events@prepmun.sg</span></li>
-              <li><span class="contact-item">Event Dates: 16-17 Aug 2025</span></li>
+              <li>
+                <span class="contact-item">Email: worldswegovern@gmail.com</span
+                >
+              </li>
+              <li>
+                <span class="contact-item">Instagram: @worldswegovern</span>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <div class="footer-divider"></div>
         <div class="footer-meta">
-          <p class="copyright">
-            © 2025 Worlds We Govern. All rights reserved.
-          </p>
+          <p class="copyright">© 2026 Worlds We Govern. All rights reserved.</p>
           <div class="partnership">
             <span class="partnership-text">Supported by:</span>
-            <span class="partner-name">People's Association & National Youth Council</span>
+            <span class="partner-name"
+              >People's Association & National Youth Council</span
+            >
           </div>
         </div>
       </div>
     </div>
   </div>
-  
-  <div class="footer-decoration">
-    <Image src={decorationImage} alt="" class="decoration-image" />
-  </div>
 </footer>
 
 <style>
   .footer {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--primary-blue) 0%,
+      var(--deep-blue) 100%
+    );
     color: var(--white);
     position: relative;
     overflow: hidden;
+  }
+
+  .footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .footer-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.3;
   }
 
   .footer-content {
@@ -132,7 +162,12 @@ import decorationImage from '/public/IMG_0450.PNG';
 
   .footer-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+    );
     margin-bottom: 2rem;
   }
 
@@ -163,17 +198,6 @@ import decorationImage from '/public/IMG_0450.PNG';
   .partner-name {
     color: var(--light-gold);
     font-weight: 600;
-  }
-
-  .footer-decoration {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 500px;
-    height: 100%;
-    opacity: 0.15;
-    z-index: 1;
-    overflow: hidden;
   }
 
   .decoration-image {

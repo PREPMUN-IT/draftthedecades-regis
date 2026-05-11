@@ -1,0 +1,229 @@
+---
+import { Image } from "astro:assets";
+import DTD2025 from "/public/dtd2025_pics.png";
+import PrepmunPresents from "/public/prepmun_presents.png";
+import DTD2025BG from "/public/dtd2025_bg.png";
+import DTD2025_1 from "/public/dtd2025_1.jpg";
+import DTD2025_2 from "/public/dtd2025_2.jpg";
+import DTD2025_3 from "/public/dtd2025_3.jpg";
+---
+
+<section id="about" class="about">
+  <!-- Desktop / Laptop View -->
+  <div class="desktop-view">
+    <div class="banner">
+      <Image src={DTD2025} alt="Banner" class="about-bg-image" />
+      <div class="about-content">
+        <p class="section-title font-display">DRAFTING THE DECADES 2025</p>
+        <p class="section-subtitle font-display">
+          Building on the success of our 2025 pilot event, Drafting the Decades.
+        </p>
+      </div>
+    </div>
+    <div class="banner">
+      <Image
+        src={PrepmunPresents}
+        alt="Banner"
+        class="about-bg-image"
+        id="prepmun-presents"
+      />
+      <p class="present-subtitle font-display">PREPMUN Singapore Presents</p>
+    </div>
+  </div>
+
+  <!-- Mobile View -->
+  <div class="mobile-view">
+    <div class="mobile-gradient-bg">
+      <div class="mobile-scroll-section">
+        <p class="mobile-text font-display">Building on the success</p>
+        <div class="mobile-pic-wrapper">
+          <Image src={DTD2025_1} alt="DTD 2025 - Photo 1" class="mobile-pic" />
+        </div>
+
+        <p class="mobile-text font-display">of our 2025 pilot event</p>
+        <div class="mobile-pic-wrapper">
+          <Image src={DTD2025_2} alt="DTD 2025 - Photo 2" class="mobile-pic" />
+        </div>
+
+        <p class="mobile-text font-display">Drafting the Decades</p>
+        <div class="mobile-pic-wrapper">
+          <Image src={DTD2025_3} alt="DTD 2025 - Photo 3" class="mobile-pic" />
+        </div>
+      </div>
+
+      <div class="mobile-prepmun-banner">
+        <p class="present-subtitle font-display">PREPMUN Singapore Presents</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    color: var(--white);
+  }
+
+  /* ─── SHOW/HIDE LOGIC ─────────────────────────────────────── */
+  .mobile-view {
+    display: none;
+  }
+  .desktop-view {
+    display: block;
+  }
+
+  /* ─── DESKTOP / LAPTOP SHARED ────────────────────────────── */
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 650px;
+  }
+
+  .about-bg-image {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .about-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .section-title {
+    width: 10%;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+
+  .section-subtitle {
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: var(--white);
+    font-weight: 600;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+  }
+
+  .present-subtitle {
+    width: 100%;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+  }
+
+  /* ─── LAPTOP ADJUSTMENTS (1024px and below) ──────────────── */
+  @media (max-width: 1024px) {
+    .banner {
+      height: 500px;
+    }
+
+    .about-bg-image {
+      height: 500px;
+    }
+
+    .section-title {
+      width: 15%;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      top: 28%;
+      left: 8%;
+    }
+
+    .section-subtitle {
+      font-size: clamp(0.9rem, 1.8vw, 1.6rem);
+      top: 18%;
+      left: 30%;
+    }
+
+    .present-subtitle {
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .desktop-view {
+      display: none;
+    }
+    .mobile-view {
+      display: block;
+    }
+
+    .mobile-gradient-bg {
+      background: linear-gradient(
+        to bottom,
+        #000000 0%,
+        #1a0508 10%,
+        #8b0000 30%,
+        #8b0000 60%,
+        #1a0508 90%,
+        #000000 100%
+      );
+    }
+
+    .mobile-scroll-section {
+      padding: 3rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .mobile-text {
+       font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 600;
+      text-align: center;
+      color: var(--white);
+      margin: 0.5rem 0;
+    }
+
+    .mobile-pic-wrapper {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-pic {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .mobile-prepmun-banner {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-prepmun-banner .present-subtitle {
+       font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 600;
+      text-align: center;
+      width: 90%;
+      /* reset desktop absolute positioning */
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: none;
+    }
+  }
+</style>

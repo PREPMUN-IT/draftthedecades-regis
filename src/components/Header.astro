@@ -6,7 +6,7 @@
     <div class="container">
       <div class="nav-content">
         <div class="logo">
-          <span class="logo-text font-display">Worlds We Govern</span>
+          <span class="logo-text font-display"></span> {/* Add a logo if required */}
         </div>
         
         <div class="nav-links">
@@ -14,7 +14,7 @@
           <a href="#event-details" class="nav-link">Event Details</a>
           <a href="#registration" class="nav-link">Registration</a>
           <a href="#faq" class="nav-link">FAQ</a>
-          <a href="https://forms.gle/ARhbN4R2oymJavrM8" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Register Now</a>
+          <a href="https://linktr.ee/worldswegovern" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Register Now</a>
         </div>
 
         <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
@@ -56,10 +56,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--gray-200);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 
   .nav {
@@ -75,7 +72,7 @@
   .logo-text {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--white);
   }
 
   .nav-links {
@@ -85,15 +82,17 @@
   }
 
   .nav-link {
-    color: var(--gray-700);
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+    font-size: 1.2rem;
   }
 
   .nav-link:hover {
     color: var(--primary-blue);
+    font-weight: 700;
   }
 
   .nav-link::after {
@@ -133,7 +132,7 @@
   .hamburger-line {
     width: 24px;
     height: 2px;
-    background: var(--gray-700);
+    background: var(--white);
     transition: all 0.3s ease;
     transform-origin: center;
     margin: 2px 0;
@@ -186,7 +185,7 @@
     width: 320px;
     max-width: 85vw;
     height: 100vh;
-    background: var(--white);
+    background: black;
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     transition: transform 0.3s ease;
@@ -206,9 +205,9 @@
   }
 
   .mobile-logo {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--white);
   }
 
   .mobile-close-btn {
@@ -238,7 +237,7 @@
   }
 
   .mobile-nav-link {
-    color: var(--gray-700);
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
     padding: 1rem 0;

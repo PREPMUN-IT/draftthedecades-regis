@@ -1,91 +1,208 @@
----
-import { Image } from 'astro:assets';
-import birdImage from '/public/IMG_0449.PNG';
----
-
-<section id="registration" class="registration section-padding">
+<section id="registration" class="registration-section section-padding">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title font-display text-gradient">Registration</h2>
-      <p class="section-subtitle">
-        Ready to shape Singapore's future? Here's how to join Drafting the Decades.
-      </p>
-    </div>
+    <div class="tables">
+      <header class="section-header font-display">
+        <h1 class="section-title">Registration Details</h1>
+        <p class="section-subtitle">Independent Participants</p>
+      </header>
 
-    <div class="registration-content">
-      <div class="registration-info">
-        <div class="info-card card">
-          <div class="card-header">
-            <div class="card-icon">📝</div>
-            <h3 class="card-title font-display">How to Register</h3>
+      <!-- Desktop Table View -->
+      <div class="table-container desktop-only">
+        <table class="registration-table">
+          <thead>
+            <tr>
+              <th>Registration Tier</th>
+              <th>Price</th>
+              <th>Registration Deadline</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tier-name">Early Bird</td>
+              <td class="tier-price">$35</td>
+              <td class="tier-deadline">31 May 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--open">OPEN</span></td
+              >
+            </tr>
+            <tr>
+              <td class="tier-name">Regular</td>
+              <td class="tier-price">$40</td>
+              <td class="tier-deadline">22 June 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--coming-soon"
+                  >COMING SOON</span
+                ></td
+              >
+            </tr>
+            <tr>
+              <td class="tier-name">Last Call</td>
+              <td class="tier-price">$45</td>
+              <td class="tier-deadline">20 July 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--coming-soon"
+                  >COMING SOON</span
+                ></td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Card View -->
+      <div class="mobile-cards mobile-only">
+        <div class="tier-card card">
+          <div class="tier-header">
+            <h3 class="tier-name">Early Bird</h3>
+            <span class="status-badge status-badge--open">OPEN</span>
           </div>
-          
-          <div class="registration-steps">
-            <div class="step">
-              <div class="step-number">1</div>
-              <div class="step-content">
-                <h4 class="step-title">Form Your Team</h4>
-                <p class="step-description">
-                  Gather 3-5 members from any Singapore educational institution aged between 14 to 25 years old (inclusive). Solo participants welcome - we'll help you find teammates!
-                </p>
-              </div>
+          <div class="tier-details">
+            <div class="detail-item">
+              <span class="detail-label">Price:</span>
+              <span class="tier-price">$35</span>
             </div>
-            
-            <div class="step">
-              <div class="step-number">2</div>
-              <div class="step-content">
-                <h4 class="step-title">Complete Registration</h4>
-                <p class="step-description">
-                  Only one team member (Point of Contact) needs to complete the registration form on behalf of the group / pair. Solo participants are required to sign up independently.
-                </p>
-              </div>
-            </div>
-            
-            <div class="step">
-              <div class="step-number">3</div>
-              <div class="step-content">
-                <h4 class="step-title">Pay Deposit</h4>
-                <p class="step-description">
-                  A refundable deposit of SGD $10 per participant is required. A full refund will be processed within three working days after attendance at the event.
-                </p>
-              </div>
+            <div class="detail-item">
+              <span class="detail-label">Deadline:</span>
+              <span class="tier-deadline">31 May 2026, 2359hrs</span>
             </div>
           </div>
         </div>
 
-        <div class="deadline-card card">
-          <div class="deadline-content">
-            <div class="deadline-icon">⏰</div>
-            <div class="deadline-text">
-              <h3 class="deadline-title font-display">Registration Deadline</h3>
-              <p class="deadline-date">2 August 2025 (Sat), 11:59 PM</p>
-              <p class="deadline-note">
-                Registration confirmation and event details will be sent to your / point of contact's registered email after sign-up. Check your spam folder just in case!
-              </p>
+        <div class="tier-card card">
+          <div class="tier-header">
+            <h3 class="tier-name">Regular</h3>
+            <span class="status-badge status-badge--coming-soon">COMING SOON</span>
+          </div>
+          <div class="tier-details">
+            <div class="detail-item">
+              <span class="detail-label">Price:</span>
+              <span class="tier-price">$40</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Deadline:</span>
+              <span class="tier-deadline">22 June 2026, 2359hrs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier-card card">
+          <div class="tier-header">
+            <h3 class="tier-name">Last Call</h3>
+            <span class="status-badge status-badge--coming-soon">COMING SOON</span>
+          </div>
+          <div class="tier-details">
+            <div class="detail-item">
+              <span class="detail-label">Price:</span>
+              <span class="tier-price">$45</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Deadline:</span>
+              <span class="tier-deadline">20 July 2026, 2359hrs</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="registration-action">
-        <div class="action-card">
-          <div class="action-content">
-            <h3 class="action-title font-display">Ready to Begin?</h3>
-            <p class="action-description">
-              Join us in exploring Singapore's past to build its future. 
-              Register now and become part of this unique SG60 experience.
-            </p>
-            
-            <div class="action-buttons">
-              <a href="https://forms.gle/ARhbN4R2oymJavrM8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" id="register">
-                Register Your Team
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-              <p class="contact-info">
-                Questions? Contact us at <strong>events@prepmun.sg</strong>
-              </p>
+      <header class="section-header font-display">
+        <p class="section-subtitle">
+          Independent Groups & School Delegations
+        </p>
+      </header>
+
+      <!-- Desktop Table View -->
+      <div class="table-container desktop-only">
+        <table class="registration-table">
+          <thead>
+            <tr>
+              <th>Registration Tier</th>
+              <th>Price</th>
+              <th>Registration Deadline</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tier-name">Early Bird</td>
+              <td class="tier-price">$30</td>
+              <td class="tier-deadline">31 May 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--open">OPEN</span></td
+              >
+            </tr>
+            <tr>
+              <td class="tier-name">Regular</td>
+              <td class="tier-price">$35</td>
+              <td class="tier-deadline">30 June 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--coming-soon"
+                  >COMING SOON</span
+                ></td
+              >
+            </tr>
+            <tr>
+              <td class="tier-name">Late</td>
+              <td class="tier-price">$40</td>
+              <td class="tier-deadline">31 July 2026, 2359hrs</td>
+              <td class="tier-status"
+                ><span class="status-badge status-badge--coming-soon"
+                  >COMING SOON</span
+                ></td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Card View -->
+      <div class="mobile-cards mobile-only">
+        <div class="tier-card card">
+          <div class="tier-header">
+            <h3 class="tier-name">Early Bird</h3>
+            <span class="status-badge status-badge--open">OPEN</span>
+          </div>
+          <div class="tier-details">
+            <div class="detail-item">
+              <span class="detail-label">Price:</span>
+              <span class="tier-price">$30</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Deadline:</span>
+              <span class="tier-deadline">31 May 2026, 2359hrs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier-card card">
+          <div class="tier-header">
+            <h3 class="tier-name">Regular</h3>
+            <span class="status-badge status-badge--coming-soon">COMING SOON</span>
+          </div>
+          <div class="tier-details">
+            <div class="detail-item">
+              <span class="detail-label">Price:</span>
+              <span class="tier-price">$35</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Deadline:</span>
+              <span class="tier-deadline">30 June 2026, 2359hrs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier-card card">
+          <div class="tier-header">
+            <h3 class="tier-name">Late</h3>
+            <span class="status-badge status-badge--coming-soon">COMING SOON</span>
+          </div>
+          <div class="tier-details">
+            <div class="detail-item">
+              <span class="detail-label">Price:</span>
+              <span class="tier-price">$40</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Deadline:</span>
+              <span class="tier-deadline">31 July 2026, 2359hrs</span>
             </div>
           </div>
         </div>
@@ -95,226 +212,255 @@ import birdImage from '/public/IMG_0449.PNG';
 </section>
 
 <style>
-  .registration {
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  .tables {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .registration-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    overflow: hidden;
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 4rem;
   }
 
   .section-title {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .section-subtitle {
-    font-size: 1.25rem;
-    color: var(--gray-600);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .registration-content {
-    display: grid;
-    gap: 3rem;
-  }
-
-  .registration-info {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-  }
-
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .card-icon {
-    font-size: 2rem;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--gold) 0%, var(--light-gold) 100%);
-    border-radius: 0.75rem;
-  }
-
-  .card-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--gray-800);
-  }
-
-  .registration-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .step {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-  }
-
-  .step-number {
-    width: 2.5rem;
-    height: 2.5rem;
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--royal-blue) 100%);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    letter-spacing: 0.02em;
+  }
+
+  /* Desktop Table Styles */
+  .table-container {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .registration-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead tr {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  }
+
+  thead th {
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-align: center;
+  }
+
+  tbody tr {
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  tbody td {
+    padding: 1.1rem 1.5rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .tier-name {
     font-weight: 600;
-    flex-shrink: 0;
+    letter-spacing: 0.02em;
+  }
+  .tier-price {
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+  }
+  .tier-deadline {
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+  .tier-status {
+    padding-right: 1rem;
   }
 
-  .step-title {
-    font-weight: 600;
-    color: var(--gray-800);
-    margin-bottom: 0.5rem;
+  .status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border-radius: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 
-  .step-description {
-    color: var(--gray-700);
-    line-height: 1.6;
+  .status-badge--open {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.35);
   }
 
-  .deadline-card {
-    background: linear-gradient(135deg, var(--cream) 0%, rgba(251, 191, 36, 0.1) 100%);
-    border: 1px solid rgba(245, 158, 11, 0.2);
+  .status-badge--coming-soon {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  .deadline-content {
+  /* Mobile Card Styles */
+  .mobile-cards {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 1rem;
   }
 
-  .deadline-icon {
-    font-size: 3rem;
+  .tier-card {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0rem;
+    transition: all 0.3s ease;
   }
 
-  .deadline-title {
+  .tier-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .tier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .tier-header .tier-name {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--gray-800);
-    margin-bottom: 0.5rem;
+    margin: 0;
   }
 
-  .deadline-date {
-    font-size: 1.125rem;
+  .tier-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .detail-label {
     font-weight: 600;
+    color: var(--white);
+    opacity: 0.8;
+  }
+
+  .detail-item .tier-price {
+    font-size: 1.1rem;
     color: var(--gold);
-    margin-bottom: 1rem;
   }
 
-  .deadline-note {
+  .detail-item .tier-deadline {
     font-size: 0.9rem;
-    color: var(--gray-600);
-    line-height: 1.5;
+    opacity: 0.9;
   }
 
-  .action-card {
-    background: var(--white);
-    border-radius: 1.5rem;
-    padding: 3rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--gray-100);
-    text-align: center;
+  /* Responsive Design */
+  .desktop-only {
+    display: block;
   }
 
-  .action-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--gray-800);
-    margin-bottom: 1rem;
-  }
-
-  .action-description {
-    font-size: 1.125rem;
-    color: var(--gray-700);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-
-  .action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .btn-large {
-    padding: 1rem 2.5rem;
-    font-size: 1.125rem;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-
-  .contact-info {
-    font-size: 0.9rem;
-    color: var(--gray-600);
-    text-align: center;
-  }
-
-
-  .free-bird {
-    position: absolute;
-    top: 20%;
-    right: 5%;
-    width: 200px;
-    height: auto;
-    z-index: 10;
-    border-radius: 1rem;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-  }
-
-  .free-bird:hover {
-    transform: scale(1.05);
-  }
-
-  .action-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .mobile-only {
+    display: none;
   }
 
   @media (max-width: 768px) {
-    .registration-info {
-      grid-template-columns: 1fr;
+    .registration-section {
+      min-height: auto;
+      padding: 2rem 0;
     }
 
-    .action-card {
-      padding: 2rem;
+    .tables {
+      gap: 2rem;
+    }
+    .desktop-only {
+      display: none;
     }
 
-    .step {
-      gap: 1rem;
-    }
-
-    .step-number {
-      width: 2rem;
-      height: 2rem;
-    }
-
-    .free-bird {
-      position: relative;
-      top: auto;
-      right: auto;
-      width: 150px;
-      margin: 2rem auto 0;
+    .mobile-only {
       display: block;
+    }
+
+    .tier-card {
+      padding: 1.25rem;
+    }
+
+    .tier-header .tier-name {
+      font-size: 1.1rem;
+    }
+
+    .detail-item .tier-price {
+      font-size: 1rem;
+    }
+
+    .detail-item .tier-deadline {
+      font-size: 0.85rem;
+    }
+
+    .status-badge {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.6rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tier-card {
+      padding: 1rem;
+    }
+
+    .tier-header {
+      margin-bottom: 0.75rem;
+    }
+
+    .tier-header .tier-name {
+      font-size: 1rem;
+    }
+
+    .tier-details {
+      gap: 0.5rem;
+    }
+
+    .detail-item .tier-price {
+      font-size: 0.95rem;
+    }
+
+    .detail-item .tier-deadline {
+      font-size: 0.8rem;
+    }
+
+    .status-badge {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.5rem;
     }
   }
 </style>

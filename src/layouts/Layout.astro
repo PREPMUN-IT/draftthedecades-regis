@@ -14,9 +14,12 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <slot />
@@ -25,21 +28,19 @@ const { title } = Astro.props;
 
 <style is:global>
   :root {
-    --primary-blue: #1e3a8a;
-    --deep-blue: #1e40af;
-    --royal-blue: #2563eb;
-    --gold: #f59e0b;
-    --light-gold: #fbbf24;
     --cream: #fef3c7;
     --white: #ffffff;
     --gray-50: #f9fafb;
     --gray-100: #f3f4f6;
     --gray-200: #e5e7eb;
     --gray-300: #d1d5db;
+    --gray-400: #bcc0c5;
     --gray-600: #4b5563;
     --gray-700: #374151;
     --gray-800: #1f2937;
     --gray-900: #111827;
+    --red-dark: #8b0000;
+    --red-light: #c06c73;
   }
 
   * {
@@ -50,17 +51,26 @@ const { title } = Astro.props;
 
   html {
     scroll-behavior: smooth;
+    background: linear-gradient(
+      to bottom,
+      #d9969e 0%,
+      #aa0000 65%,
+      #1a0a0a 95%,
+      #0a0a0a 100%
+    ); /*the gradient has to be inverted for some reason*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.6;
-    color: var(--gray-800);
-    background: var(--white);
+    color: var(--white);
+    background: transparent;
   }
 
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: "Outfit", serif;
   }
 
   .container {
@@ -88,16 +98,17 @@ const { title } = Astro.props;
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--light-gold) 100%);
+    background: linear-gradient(135deg, #4a0404 0%, #c90c0c 100%);
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 4px 25px 2px rgba(255, 0, 0, 0.6);
+    transition: all 0.3s ease; 
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 8px 30px rgba(255, 0, 0, 0.7);
   }
-
+  
   .btn-secondary {
     background: transparent;
     color: var(--primary-blue);
@@ -111,7 +122,11 @@ const { title } = Astro.props;
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--royal-blue) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--primary-blue) 0%,
+      var(--royal-blue) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -125,14 +140,25 @@ const { title } = Astro.props;
   }
 
   .card {
-    background: var(--white);
+    /* Semi-transparent background */
+    background: rgba(255, 255, 255, 0.1);
+
+    /* The "Glass" magic: blurs whatever is behind the element */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Support for Safari */
+
+    /* Modern rounded corners */
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border: 1px solid var(--gray-100);
-  }
 
+    /* A very thin, light border helps define the edges on dark/busy backgrounds */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* Soft shadow to give it depth without looking heavy */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s ease;
+  }
   .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
@@ -142,7 +168,7 @@ const { title } = Astro.props;
     .container {
       padding: 0 1rem;
     }
-    
+
     .section-padding {
       padding: 3rem 0;
     }
