@@ -14,14 +14,20 @@ import campusImpactLogo from "/public/campus_impact.png";
     <div class="partners-content">
       <div class="partners-description">
         <p class="description-text">
-          Drafting the Decades is a collaborative initiative by PREPMUN and the
-          Moulmein-Cairnhill Youth Network, organised in commemoration of SG60.
-          The event is proudly supported by the People's Association and the
+          Worlds We Govern is an initiative by PREPMUN, and we are proud to
+          partner with MAJU: The Youth Policy Research Initiative and
+          CampusImpact for our 2026 iteration. Their support ensures that WWG
+          remains grounded in the youth policy scene and emphasises to our
+          participants the very human impact that policymaking can have.
+        </p>
+        <p class="description-text">
+          We were previously supported in our 2025 iteration by the
+          Moulmein-Cairnhill Youth Network, the People's Association, and the
           National Youth Council, whose continued commitment to youth
           development and civic engagement has made this ground-up initiative
-          possible. Their support empowers youth to reflect on our nation's past
-          policy choices and co-create visions for the future through meaningful
-          dialogue and policy innovation.
+          possible. Their support empowered youth to reflect on our nation's
+          past policy choices and co-create visions for the future through
+          meaningful dialogue and policy innovation.
         </p>
       </div>
 
@@ -39,11 +45,7 @@ import campusImpactLogo from "/public/campus_impact.png";
           <h3 class="tier-title">Supported by:</h3>
           <div class="logo-row">
             <div class="logo-item">
-              <Image
-                src={majuLogo}
-                alt="Maju"
-                class="partner-logo"
-              />
+              <Image src={majuLogo} alt="Maju" class="partner-logo" />
             </div>
             <div class="logo-item">
               <Image
@@ -70,7 +72,7 @@ import campusImpactLogo from "/public/campus_impact.png";
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 600;
     margin-bottom: 1rem;
   }
@@ -89,8 +91,9 @@ import campusImpactLogo from "/public/campus_impact.png";
     font-size: 1.125rem;
     line-height: 1.8;
     color: var(--white);
-    max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 2rem;
+    text-wrap: balance;
+    font-size: clamp(1rem, 3vw, 1.2rem);
   }
 
   .partners-logos {
