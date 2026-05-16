@@ -146,10 +146,12 @@
         <div class="contact-card card">
           <div class="contact-content">
             <h3 class="contact-title font-display">Still Have Questions?</h3>
-            <p class="contact-description">
-              Can't find what you're looking for? We're here to help! Reach out
-              to us for any additional questions or clarifications.
-            </p>
+            <div class="contact-description">
+              <p>Can't find what you're looking for? We're here to help!</p>
+              <p class="cta">
+                Reach out to us for any additional questions or clarifications.
+              </p>
+            </div>
             <div class="contact-info">
               <strong>Contact us at: worldswegovern@gmail.com</strong>
             </div>
@@ -294,6 +296,10 @@
       margin-bottom: 1.5rem;
     }
 
+    .cta {
+      margin-top: 0.5rem;
+    }
+
     .contact-info {
       color: var(--gray-800);
       font-size: 1.125rem;
@@ -324,33 +330,37 @@
   <script is:inline>
     function setupFAQ() {
       // Use event delegation on the document
-      document.addEventListener("click", function(e) {
-        const target = e.target;
-        
-        // Check if the clicked element is a FAQ question or inside one
-        const faqQuestion = target.closest(".faq-question");
-        if (!faqQuestion) {
-          return;
-        }
-        
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const faqItem = faqQuestion.closest(".faq-item");
-        if (!faqItem) return;
+      document.addEventListener(
+        "click",
+        function (e) {
+          const target = e.target;
 
-        const isActive = faqItem.classList.contains("active");
+          // Check if the clicked element is a FAQ question or inside one
+          const faqQuestion = target.closest(".faq-question");
+          if (!faqQuestion) {
+            return;
+          }
 
-        // Close all FAQ items
-        document.querySelectorAll(".faq-item").forEach((item) => {
-          item.classList.remove("active");
-        });
+          e.preventDefault();
+          e.stopPropagation();
 
-        // Open clicked item if it wasn't active
-        if (!isActive) {
-          faqItem.classList.add("active");
-        }
-      }, true); // Use capture phase
+          const faqItem = faqQuestion.closest(".faq-item");
+          if (!faqItem) return;
+
+          const isActive = faqItem.classList.contains("active");
+
+          // Close all FAQ items
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Open clicked item if it wasn't active
+          if (!isActive) {
+            faqItem.classList.add("active");
+          }
+        },
+        true,
+      ); // Use capture phase
     }
 
     // Setup immediately
