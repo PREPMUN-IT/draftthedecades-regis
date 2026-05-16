@@ -148,7 +148,6 @@ import footerBg from "/public/footer_bg.png";
 
   .link-title {
     font-size: 1.125rem;
-    font-weight: 600;
     margin-bottom: 1rem;
     color: var(--light-gold);
   }
@@ -241,9 +240,18 @@ import footerBg from "/public/footer_bg.png";
     }
 
     .footer-meta {
+      display: flex;
       flex-direction: column;
       text-align: center;
       gap: 1rem;
+    }
+
+    .footer-meta .partnership {
+      order: 1;
+    }
+
+    .footer-meta .copyright {
+      order: 2;
     }
 
     .footer-decoration {
