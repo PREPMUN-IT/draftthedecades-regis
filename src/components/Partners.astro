@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import prepmunLogo from "/public/prep clear logo.png";
 import majuLogo from "/public/maju.png";
 import campusImpactLogo from "/public/campus_impact.png";
+import craftCoLogo from "/public/craft&co.png";
 ---
 
 <section id="partners" class="partners section-padding">
@@ -33,7 +34,7 @@ import campusImpactLogo from "/public/campus_impact.png";
 
       <div class="partners-logos">
         <div class="logo-tier">
-          <h3 class="tier-title">Organised by:</h3>
+          <h3 class="tier-title">Organised by</h3>
           <div class="logo-row">
             <div class="logo-item">
               <Image src={prepmunLogo} alt="PREPMUN" class="partner-logo" />
@@ -42,7 +43,7 @@ import campusImpactLogo from "/public/campus_impact.png";
         </div>
 
         <div class="logo-tier">
-          <h3 class="tier-title">Supported by:</h3>
+          <h3 class="tier-title">Supported by</h3>
           <div class="logo-row">
             <div class="logo-item">
               <Image src={majuLogo} alt="Maju" class="partner-logo" />
@@ -53,6 +54,15 @@ import campusImpactLogo from "/public/campus_impact.png";
                 alt="National Youth Council"
                 class="partner-logo"
               />
+            </div>
+          </div>
+        </div>
+
+        <div class="logo-tier">
+          <h3 class="tier-title">Silver Tier Sponsors</h3>
+          <div class="logo-row">
+            <div class="logo-item">
+              <Image src={craftCoLogo} alt="Craft & Co" class="partner-logo" />
             </div>
           </div>
         </div>
@@ -107,7 +117,7 @@ import campusImpactLogo from "/public/campus_impact.png";
   }
 
   .tier-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     font-family: "Inter", sans-serif;
